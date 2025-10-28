@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="OIO.CSS">
+    <link rel="icon" href="ni.png">
+     <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        p{
+          color: aquamarine;
+          font-size: 20;
+          padding: 10px;
+          border-radius: 10px;
+        }
+        body {
+background: #074469;
+font-family: 'geomanistregular', Tahoma, sans-serif;
+margin: 0;
+direction: rtl;
+text-align: right;
+unicode-bidi: bidi-override;
+}
+label{
+color: rgb(250, 248, 248);
+display: inline;
+justify-content: space-between;
+align-items: center;
+margin: 2rem auto;
+max-width: 1200px;
+}
+.input{
+    color: #00adb5;
+   display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 2rem auto;
+max-width: 1200px; 
+}
+.div{
+    color: #00adb5;
+    display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 2rem auto;
+max-width: 1200px;
+}
+.section{
+    display: block;
+}
+nav{
+    color: aliceblue;
+}
+a{
+    color: aliceblue;
+}
+*{
+    margin: 10;
+    padding: auto;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+.navigation ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+.navigation a{
+    text-decoration: none;
+} 
+.navigation a:hover{
+    color: #000;
+    background: rgb(13, 201, 218);
+    box-shadow: 0 0 5px rgb(13, 201, 218),
+                 0 0 50px  rgb(13, 201, 218),
+                 0 0 75px  rgb(13, 201, 218),
+                 0 0 100px  rgb(13, 201, 218);
+} 
+hr{
+    opacity: 10;
+    color: #4de8f4;
+    background: #000;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 1200px;
+}
+.arrow{
+    position: absolute;
+    transform: translateX(-5.5rem) translateY(1.5rem);
+}
+.herosub{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}   
+.name{
+    font-size: 5rem;
+    color: #eeeeee;
+}
+.title{
+    font-size: 4rem;
+    color: aquamarine;
+}
+.herobtns{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.hireme{
+    background: aquamarine;
+    color: #eeeeee;
+    border-radius: 24px;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 0px 4px 4px aquamarine;
+    box-shadow: 0 0 5px aquamarine,
+                 0 0 50px aquamarine,
+                  0 0 75px aquamarine;
+}
+.cv{
+    background:aquamarine;
+    color: #eeeeee;
+    border-radius: 24px;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 5px aquamarine,
+                 0 0 50px aquamarine,
+                  0 0 75px aquamarine;
+}
+.aboutme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 1200px;
+    gap: 10rem;
+}
+.textcontainer{
+    display: flex;
+    flex-direction: column;
+}
+.texttitle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 2rem;
+}
+.aboutname{
+    color: #eeeeee;
+}
+.abouttitle{
+    color: #00adb5;
+}
+.aboutmepar{
+    text-align: justify;
+    color: rgba(18, 189, 208, 0.75);
+    display: flex;
+}
+.src{
+    background-color: #eeeeee;
+}
+.container{
+    display: flex;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    box-sizing: 0.4px 15px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.5s;
+    left: 0.5;
+}
+.card:not(:first-child){
+    margin-left: -50px;
+}
+.card:hover{
+    transform: translateY(-20px);
+}
+.card:hover ~ .card{
+    left: 50px;
+}
+.workscontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    margin: 5rem auto;
+    max-width: 1200px;
+}
+.projicttitle{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    font-size: 2rem;
+}
+.works ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.works li{
+    border-radius: 16px;
+    background-color: rgba(57,62,70,0.5);
+    backdrop-filter: blur(4px);
+    padding: 1rem 4rem;
+}
+.works li img{
+    width: 200;
+    height: 200;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+.works li :hover{
+    transform: scale(1.5);
+}
+.contactcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+.contacttitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    gap: 20rem;
+}
+.contact a,.contact a{
+    text-decoration: none;
+        color: #000;
+    background: rgb(13, 201, 218);
+    box-shadow: 0 0 5px rgb(13, 201, 218),
+                 0 0 50px  rgb(13, 201, 218),
+                 0 0 75px  rgb(13, 201, 218),
+                 0 0 100px  rgb(13, 201, 218);
+}
+.emailandphone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.socialmedia a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: rgba(57,62,70,0.5);
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+}
+.socialmedia img{
+    width: 24px;
+    height: 24px;
+     background-color: rgba(57,62,70,0.5);
+}
+footer{
+    color: #eeeeee;
+    padding: 2rem;
+    text-align: center;
+}
+@media (max-width: 1023px){
+    header{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.hero{
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.herolag{
+    width: 400px;
+}
+.name, .title{
+    font-size: 2rem;
+}
+.arrow{
+    display: none;
+}
+.aboutme{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+}
+.textcontainer{
+    align-items: center;
+    margin: 0rem 5rem;
+    gap: 1rem;
+}
+.aboutname, .abouttitle{
+    font-size: 2rem;
+}
+.light{
+    width: 60px;
+}
+.aboutmeimg{
+    width: 400px;
+}
+.works{
+    padding: 0;
+}
+.workscontainer{
+    padding: 5rem 0rem;
+    gap: 3rem;
+}
+.projicttitle{
+    margin-left: 1rem;
+}
+.works ul{
+    flex-direction: column;
+    gap: 1rem;
+}
+.contactcontainer{
+ margin: 10rem 5rem;
+ gap: 2rem;  
+}
+.contact{
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 0;
+}
+}
+.icons a{
+text-decoration: none;
+font-size:30px;
+border-radius: 30;
+color: #fffc00;
+text-align: center;
+margin: 30px;
+letter-spacing: 2px;
+height: 80px;
+width: 80px;
+align-items: center;
+transition: 0.3s ease;
+box-sizing: border-box;
+justify-content: center;
+color: var(--color);
+}
+a:hover{
+    background: var(--color);
+    color: #000;
+    box-shadow: 0 0 5px var(--color),
+                 0 0 50px var(--color),
+                   0 0 75px var(--color),
+                   0 0 100px var(--color);
+
+}
+.input-group{
+    padding:  40px 40px 35px 30px;
+    border-radius: 20px;
+    background:  #074469;
+    box-shadow: 10px 10px 20px   #074469,
+                -10px 10px 20px   #00adb5;
+}
+
+
+    </style>
+    
+
+</head>
+<body>
+    
+      <header>
+       <img id="a" src="E:\ni.png" height="200" width="200" alt="mosaabk99 logo"/>
+        <nav class="navigation">
+          <ul>
+               <li><a href="#aboutme">about me</a></li>
+               <li><a href="#myworks">my works</a></li>
+               <li><a href="#contactme">contact</a></li>
+               <li><a href="#App">App</a></li>
+          </ul> 
+        </nav>
+      </header>
+      <hr color="#eeffaa"/>
+      <br><br><br>
+      <br><br>
+      <section class="href">
+      <img class="arrow"/>
+      <div class="herosub">
+        <img src="E:\v.png" height="400" width="400"/>
+        <h1 class="name">I'M MOSTAFA</h1>
+        <h1 class="title">SOFTWERE ENGINEER</h1>
+        <div class="herobtns">
+          <a class="hireme" href="#contactme">Hire Me</a>
+          <a class="cv" href="E:\@التمهيد ‫‬11.docx" download>Download cv
+          </a>
+        </div>
+      </div>
+      </section>
+      <section class="aboutme" id="aboutme">
+        
+        <div class="textcontainer">
+          <div class="texttitle">
+            <h1 class="aboutme">ME</h1>
+            <h1 class="abouttitle">ABOUT</h1>
+            <img src="E:\li.png" height="400" width="400" alt="lightbulb" class="ligh"/>
+          </div>
+          <h1>
+          <p class="aboutmepar" >
+            Hello MY name is MOSTAFA I love in new york Iam 21 years oid Iam a programmer MY hobbies are a programmer I enjoy playing footboll 
+          </p>
+          </h1>
+        </div>
+        <br><br><br>
+        <hr color="#eeffaa"/>
+      </section>
+      <section class="works" id="myworks">
+        <div class="workscontainer">
+          <h1 class="aboutname">my recent</h1>
+          <h1 class="abouttitle">works</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="tiktok.com/@user209401101581"><img src="E:\mp.jpg" height="150" width="200" alt="landing page"/></a>
+          </li>
+          <li>
+            <a href="tiktok.com/@user209401101581"><img src="E:\mu.jpg" height="150" width="200"  alt="wep 4pp"/></a>
+          </li>
+          <li>
+            <a href="tiktok.com/@user209401101581"><img src="E:\mk.jpg" height="150" width="200"  alt="4pp"/></a>
+          </li>
+        </ul>
+      </section>
+      <hr>
+      
+
+      <br><br>
+ <section class="contactcontainer" id="contactme">
+        <div class="contacttitle">
+          <h1 class="aboutname">contact</h1>
+          <h1 class="abouttitle"></h1>
+        </div>
+        <div class="contact">
+          <div class="emailandphone">
+            <a href="tiktok.com/@user209401101581"><h3>tiktok.com/@user209401101581</h3></a>
+          </div>
+          <div class="emailandphone">
+            <a href="@MS736738433"><h2>للتواصل واتساب736738433</h2></a>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <footer>
+        <p>Built by MOSTAFA</p>
+      </footer>
+ <br><br><br>
+ <center>
+ <section class="App" id="App">
+<div class="icons">
+   <h2> تابعنا على وسائل التواصل الاجتماعي</h2>
+   <br>
+    <a href="https://www.faceok.com/@youraccount" style="--color:#1877f2;"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/@youraccount" style="--color:#fd1d1d;"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.snapchat.com/@youraccount" style="--color:#fffc00;"><i class="fa-brands fa-snapchat"></i></a>
+    <a href="https://www.tiktok.com/@youraccount" style="--color:#4de8f4;"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="https://www.whatsapp.com/@youraccount" style="--color:#25d366;"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://www.google.com/@youraccount" style="--color:#eefaf2;"><i class="fa-brands fa-google"></i></a>
+</div>
+</section>
+</center>
+<br><br><br><br>
+
+
+</body>
+</html>
